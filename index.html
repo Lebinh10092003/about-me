@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lê Văn Bình — Huấn luyện viên Robotics & Lập trình</title>
+<meta name="description" content="Lê Văn Bình — giáo viên STEAM, huấn luyện viên Robotics (WRO, Enjoy AI) và Lập trình thi đấu (HKICO, Tin học trẻ). Hành trình cùng học sinh từ lớp học đến chung kết quốc tế.">
+<meta property="og:title" content="Lê Văn Bình — Huấn luyện viên Robotics & Lập trình">
+<meta property="og:description" content="Top 2 thế giới Enjoy AI 2025 · 2 lần Top 1 Enjoy AI Asian Open 2026 · 8 Gold HKICO 2026">
+<meta property="og:image" content="https://lebinh10092003.github.io/about-me/assets/img/gf25-team.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%235B3DF5'/><circle cx='16' cy='16' r='6' fill='%23F2B230'/></svg>">
+<link rel="stylesheet" href="assets/fonts.css">
+<style>
+:root{
+  --mat:#F3F1FA;        /* sân thi đấu */
+  --mat-line:#DCD6F2;
+  --tape:#17142A;       /* băng dò line */
+  --violet:#5B3DF5;
+  --violet-deep:#2A1C8F;
+  --gold:#F2B230;
+  --teal:#13A89E;
+  --ink:#17142A;
+  --muted:#5D5A73;
+  --white:#FFFFFF;
+  --r-lg:22px; --r-sm:10px;
+  --wrap:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:'Be Vietnam Pro',system-ui,sans-serif;color:var(--ink);background:var(--white);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+h1,h2,h3{line-height:1.12;letter-spacing:-.02em}
+h2{font-size:clamp(30px,4.2vw,50px);font-weight:800;max-width:18ch}
+.sub{color:var(--muted);max-width:56ch;margin-top:14px}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,box-shadow .3s}
+.nav.solid{background:rgba(255,255,255,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--mat-line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:800;text-decoration:none;display:flex;align-items:center;gap:10px;color:#fff}
+.nav.solid .brand,.nav.solid .links a{color:var(--ink)}
+.brand i{width:14px;height:14px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(242,178,48,.3)}
+.links{display:flex;gap:26px}
+.links a{color:#fff;text-decoration:none;font-weight:600;font-size:15px;opacity:.9}
+.links a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
+@media (max-width:760px){.links{display:none}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;background:var(--violet-deep);color:#fff;overflow:hidden;display:flex;align-items:flex-end}
+.hero-photo{position:absolute;inset:0}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.hero-photo::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(23,20,42,.25) 0%,rgba(23,20,42,0) 30%,rgba(42,28,143,.55) 62%,rgba(23,20,42,.96) 100%)}
+.hero .wrap{position:relative;padding-bottom:56px;padding-top:120px;width:100%}
+.hero-grid{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:end}
+.avatar{width:132px;height:132px;border-radius:50%;padding:4px;background:conic-gradient(var(--gold),#FFE2A0,var(--gold))}
+.avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:4px solid var(--violet-deep)}
+.hero h1{font-size:clamp(46px,8.4vw,112px);font-weight:800;letter-spacing:-.035em;line-height:.95}
+.hero .role{font-size:clamp(18px,2.1vw,24px);font-weight:500;color:#DAD4FF;margin-top:14px;max-width:34ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;font-weight:700;text-decoration:none;font-size:16px;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:var(--tape)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.55);color:#fff}
+@media (max-width:640px){.hero-grid{grid-template-columns:1fr}.avatar{width:96px;height:96px}}
+
+/* ---------- scoreboard ---------- */
+.board{background:var(--tape);color:#fff;padding:0}
+.board ol{list-style:none;display:grid;grid-template-columns:repeat(4,1fr)}
+.board li{padding:30px 24px;border-right:1px solid rgba(255,255,255,.1);position:relative}
+.board li:last-child{border-right:0}
+.board .res{font-size:clamp(30px,3.4vw,44px);font-weight:800;color:var(--gold);line-height:1;letter-spacing:-.02em}
+.board .what{font-size:15px;color:#CFCBE6;margin-top:10px;line-height:1.45}
+.board .what b{color:#fff;font-weight:700;display:block}
+@media (max-width:860px){.board ol{grid-template-columns:1fr 1fr}.board li:nth-child(2){border-right:0}.board li:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.1)}}
+
+section{padding:110px 0}
+@media (max-width:700px){section{padding:76px 0}}
+
+/* ---------- journey: line-follower track ---------- */
+.journey{background:var(--mat);background-image:
+  linear-gradient(var(--mat-line) 1px,transparent 1px),linear-gradient(90deg,var(--mat-line) 1px,transparent 1px);
+  background-size:56px 56px;background-position:-1px -1px}
+.track{position:relative;margin-top:64px}
+.track svg.path{position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.track .tape{fill:none;stroke:var(--tape);stroke-width:18;stroke-linecap:round;stroke-linejoin:round}
+.track .tape-done{fill:none;stroke:var(--violet);stroke-width:18;stroke-linecap:round;stroke-linejoin:round}
+.robot{position:absolute;left:0;top:0;width:44px;height:44px;margin:-22px 0 0 -22px;z-index:3;pointer-events:none}
+.stop{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;min-height:420px;padding:40px 0;z-index:2}
+.stop:nth-child(even) .stop-media{order:2}
+.stop-media{position:relative}
+.stop-media img{border-radius:var(--r-lg);aspect-ratio:4/3;object-fit:cover;width:100%;box-shadow:0 24px 50px -24px rgba(42,28,143,.45);background:#ddd}
+.stop-media .pin{position:absolute;top:-14px;left:22px;background:var(--gold);color:var(--tape);font-weight:800;font-size:15px;padding:6px 14px;border-radius:999px}
+.stop-text{background:rgba(255,255,255,.94);border-radius:var(--r-lg);padding:30px 32px;border:1px solid var(--mat-line)}
+.stop-text .year{font-weight:800;color:var(--violet);font-size:15px}
+.stop-text h3{font-size:clamp(24px,2.6vw,32px);font-weight:800;margin-top:6px}
+.stop-text p{color:var(--muted);margin-top:12px}
+.stop-text ul{list-style:none;margin-top:16px;display:grid;gap:8px}
+.stop-text li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:baseline;font-size:16px}
+.stop-text li b{font-weight:800;color:var(--tape);background:#FFF1D0;border-radius:6px;padding:1px 8px;font-size:14px;white-space:nowrap}
+@media (max-width:820px){
+  .stop{grid-template-columns:1fr;gap:20px;min-height:0;padding:28px 0 28px 44px}
+  .stop:nth-child(even) .stop-media{order:0}
+}
+
+/* ---------- programs ---------- */
+.lanes{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:56px}
+.lane{border-radius:var(--r-lg);padding:36px;position:relative;overflow:hidden}
+.lane.robo{background:var(--violet);color:#fff}
+.lane.code{background:#FFF4DA}
+.lane h3{font-size:30px;font-weight:800}
+.lane p{margin-top:12px;max-width:42ch}
+.lane.robo p{color:#E2DCFF}
+.lane.code p{color:#5A4A22}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chips span{font-weight:700;font-size:14px;padding:6px 14px;border-radius:999px}
+.robo .chips span{background:rgba(255,255,255,.14);color:#fff}
+.code .chips span{background:#fff;color:#5A4A22;border:1px solid #F0DDA8}
+.lane .tools{margin-top:22px;font-size:15px}
+.robo .tools{color:#C9C0FF}.code .tools{color:#7A6633}
+@media (max-width:820px){.lanes{grid-template-columns:1fr}}
+
+.method{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;counter-reset:s;border-top:3px solid var(--tape)}
+.method li{list-style:none;padding:26px 24px 0 0;counter-increment:s}
+.method li::before{content:counter(s);display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--tape);color:#fff;font-weight:800;margin-top:-45px;margin-bottom:16px}
+.method h4{font-size:19px;font-weight:800;line-height:1.3}
+.method p{color:var(--muted);font-size:15.5px;margin-top:8px}
+@media (max-width:820px){.method{grid-template-columns:1fr 1fr;row-gap:44px}}
+@media (max-width:520px){.method{grid-template-columns:1fr}}
+
+/* ---------- film ---------- */
+.film{background:var(--tape);color:#fff}
+.film .sub{color:#B9B4D6}
+.film video{width:100%;border-radius:var(--r-lg);margin-top:44px;background:#000;aspect-ratio:16/9}
+
+/* ---------- gallery ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
+.filters button{font:inherit;font-weight:700;font-size:15px;padding:9px 18px;border-radius:999px;border:1.5px solid var(--mat-line);background:#fff;color:var(--ink);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--tape);border-color:var(--tape);color:#fff}
+.masonry{columns:4 260px;column-gap:14px;margin-top:30px}
+.masonry figure{break-inside:avoid;margin-bottom:14px;position:relative;border-radius:14px;overflow:hidden;cursor:zoom-in;background:var(--mat)}
+.masonry figure[hidden]{display:none}
+.masonry img{width:100%;height:auto;transition:transform .5s}
+.masonry figure:hover img{transform:scale(1.03)}
+.masonry figcaption{position:absolute;inset:auto 0 0 0;padding:28px 14px 12px;color:#fff;font-size:14px;font-weight:600;background:linear-gradient(transparent,rgba(23,20,42,.85));opacity:0;transition:opacity .25s}
+.masonry figure:hover figcaption,.masonry figure:focus-within figcaption{opacity:1}
+.masonry button.open{all:unset;position:absolute;inset:0;cursor:zoom-in}
+.masonry button.open:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
+
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(14,12,28,.94);display:none;align-items:center;justify-content:center;padding:24px}
+.lightbox.on{display:flex}
+.lightbox img{max-height:84vh;max-width:min(1200px,92vw);border-radius:12px;object-fit:contain}
+.lightbox p{position:absolute;bottom:22px;left:0;right:0;text-align:center;color:#fff;font-weight:600}
+.lightbox button{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:0;width:52px;height:52px;border-radius:50%;font-size:24px;cursor:pointer}
+.lb-close{top:20px;right:20px}.lb-prev{left:20px}.lb-next{right:20px}
+
+/* ---------- about / contact ---------- */
+.about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:start;margin-top:48px}
+.rows{list-style:none;border-top:1px solid var(--mat-line)}
+.rows li{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--mat-line)}
+.rows .when{color:var(--violet);font-weight:700;font-size:15px}
+.rows b{display:block}
+.rows span{color:var(--muted);font-size:15.5px}
+.certs{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.certs span{border:1.5px solid var(--mat-line);border-radius:12px;padding:10px 14px;font-weight:600;font-size:15px}
+.certs small{display:block;color:var(--muted);font-weight:500;font-size:13px}
+h3.side{font-size:22px;font-weight:800;margin-bottom:16px}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr}.rows li{grid-template-columns:1fr;gap:2px}}
+
+.contact{background:var(--violet);color:#fff;padding:96px 0}
+.contact h2{max-width:20ch}
+.contact .sub{color:#DCD5FF}
+.contact-list{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.contact-list a{background:#fff;color:var(--tape);text-decoration:none;font-weight:700;padding:14px 22px;border-radius:999px}
+.contact-list a.alt{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.6)}
+footer{background:var(--tape);color:#9C97B8;font-size:14px;padding:26px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><i></i>Lê Văn Bình</a>
+    <div class="links">
+      <a href="#hanh-trinh">Hành trình</a>
+      <a href="#luyen-thi">Luyện thi</a>
+      <a href="#video">Video</a>
+      <a href="#anh">Khoảnh khắc</a>
+      <a href="#lien-he">Liên hệ</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-photo"><img src="assets/img/gf25-team.jpg" alt="Đội tuyển V+ STEAM LAB tại Enjoy AI Global Final 2025" fetchpriority="high"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="avatar"><img src="assets/img/avatar.jpg" alt="Ảnh chân dung Lê Văn Bình"></div>
+      <div>
+        <h1>Lê Văn Bình</h1>
+        <p class="role">Giáo viên STEAM, huấn luyện viên Robotics và Lập trình thi đấu cho học sinh tiểu học – THCS.</p>
+      </div>
+    </div>
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="#hanh-trinh">Xem hành trình</a>
+      <a class="btn btn-ghost" href="assets/LeVanBinh-Portfolio.pdf" download>Tải portfolio PDF</a>
+    </div>
+  </div>
+</header>
+
+<section class="board" aria-label="Thành tích nổi bật">
+  <div class="wrap">
+    <ol>
+      <li><div class="res">Top 2</div><div class="what"><b>Thế giới</b>Enjoy AI Global Final 2025, Trung Quốc</div></li>
+      <li><div class="res">2 × Top 1</div><div class="what"><b>Enjoy AI Asian Open 2026</b>Invention Trials và Battle of Stars</div></li>
+      <li><div class="res">8 Gold</div><div class="what"><b>HKICO 2026</b>10/10 học sinh đạt giải</div></li>
+      <li><div class="res">Top 3</div><div class="what"><b>WRO 2026</b>Bảng B2, Hải Phòng</div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="journey" id="hanh-trinh">
+  <div class="wrap">
+    <h2>Hành trình cùng học sinh</h2>
+    <p class="sub">Như một robot dò line: đi từng đoạn, qua từng checkpoint. Mỗi mùa giải là một vòng dạy nền tảng, luyện sân, thi đấu rồi nâng cấp giáo án cho mùa sau.</p>
+
+    <div class="track" id="track">
+      <svg class="path" aria-hidden="true"><path class="tape" id="tape"/><path class="tape-done" id="tapeDone"/></svg>
+      <svg class="robot" id="robot" viewBox="0 0 44 44" aria-hidden="true">
+        <rect x="6" y="8" width="32" height="28" rx="8" fill="#F2B230" stroke="#17142A" stroke-width="3"/>
+        <rect x="2" y="12" width="6" height="20" rx="2" fill="#17142A"/><rect x="36" y="12" width="6" height="20" rx="2" fill="#17142A"/>
+        <circle cx="17" cy="20" r="3" fill="#17142A"/><circle cx="27" cy="20" r="3" fill="#17142A"/>
+        <rect x="16" y="27" width="12" height="3" rx="1.5" fill="#17142A"/>
+      </svg>
+
+      <article class="stop">
+        <div class="stop-media"><span class="pin">04/2022</span><img src="assets/img/class-3.jpg" alt="Học sinh lập trình robot trong lớp học" loading="lazy"></div>
+        <div class="stop-text">
+          <div class="year">Xuất phát</div>
+          <h3>Bước vào lớp học STEAM</h3>
+          <p>Bắt đầu dạy lập trình và Robotics tại TEKY, từ Scratch, CodeKitten đến Python; từ Lego WeDo đến EV3, Spike và Whalebot.</p>
+        </div>
+      </article>
+
+      <article class="stop">
+        <div class="stop-media"><span class="pin">2024</span><img src="assets/img/teky-1.jpg" alt="Lễ vinh danh học sinh tại TEKY" loading="lazy"></div>
+        <div class="stop-text">
+          <div class="year">Đội tuyển đầu tiên</div>
+          <h3>Huấn luyện WRO và dẫn dắt cơ sở</h3>
+          <p>Huấn luyện đội WRO bảng B1 mùa 2024 và 2025. Từ 04/2024 làm trưởng cơ sở Teky Cầu Giấy, phụ trách chất lượng dạy học của cả đội ngũ giáo viên.</p>
+        </div>
+      </article>
+
+      <article class="stop">
+        <div class="stop-media"><span class="pin">2025</span><img src="assets/img/gf25-arch.jpg" alt="Đội tuyển V+ STEAM LAB dưới cổng Enjoy AI Global Final 2025" loading="lazy" style="object-position:50% 45%"></div>
+        <div class="stop-text">
+          <div class="year">Ra biển lớn</div>
+          <h3>Top 2 thế giới tại Trung Quốc</h3>
+          <p>Từ Top 10 Enjoy AI Việt Nam 2025, đội tuyển đi tiếp tới Enjoy AI Global Final và đứng thứ 2 thế giới.</p>
+          <ul><li><b>Top 10</b>Enjoy AI Việt Nam 2025</li><li><b>Top 2</b>Enjoy AI Global Final 2025</li></ul>
+        </div>
+      </article>
+
+      <article class="stop">
+        <div class="stop-media"><span class="pin">2026</span><img src="assets/img/vn26-2.jpg" alt="Các đội nhận Giải Nhất, Giải Nhì, Top 10 Enjoy AI Việt Nam 2026" loading="lazy"></div>
+        <div class="stop-text">
+          <div class="year">Mùa giải 2026</div>
+          <h3>Một mùa đi đâu cũng có giải</h3>
+          <p>Robotics và lập trình cùng lên tiếng: các đội Enjoy AI giành ngôi vô địch châu Á, học sinh HKICO toàn bộ đạt giải.</p>
+          <ul>
+            <li><b>2 × Top 1</b>Enjoy AI Asian Open 2026 · Invention Trials, Battle of Stars</li>
+            <li><b>8 Gold</b>HKICO 2026 · 10/10 học sinh đạt giải (8 Vàng, 1 Bạc, 1 Đồng)</li>
+            <li><b>Top 3</b>WRO 2026 · bảng B2 · Hải Phòng</li>
+            <li><b>Giải Nhất</b>Enjoy AI Việt Nam 2026 · khu vực Hà Nội</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="stop">
+        <div class="stop-media"><span class="pin">Hôm nay</span><img src="assets/img/coach-portrait.jpg" alt="Lê Văn Bình" loading="lazy" style="object-position:50% 30%"></div>
+        <div class="stop-text">
+          <div class="year">Chặng tiếp theo</div>
+          <h3>Xây công cụ để luyện thi tốt hơn</h3>
+          <p>Phát triển V+ STEAM LAB (stemrobotics.io.vn): luyện đề HKICO, Robot Quiz, Coding IDE, thư viện model robot 3D và bộ tạo nhiệm vụ ngẫu nhiên để luyện sân Enjoy AI.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="luyen-thi">
+  <div class="wrap">
+    <h2>Tôi luyện thi gì</h2>
+    <p class="sub">Hai lộ trình, cùng một cách làm: nền tảng chắc, luyện như thi thật, để học sinh tự tin trình bày trước giám khảo.</p>
+    <div class="lanes">
+      <div class="lane robo">
+        <h3>Robotics &amp; AI</h3>
+        <p>Lắp ráp, cảm biến, lập trình điều khiển và chiến thuật trên sân. Học sinh tự thiết kế, tự sửa và tự bảo vệ giải pháp của mình.</p>
+        <div class="chips"><span>WRO</span><span>Enjoy AI</span><span>FLL</span></div>
+        <p class="tools">Lego WeDo 2.0, Mindstorms EV3, Lego Spike, Whalebot</p>
+      </div>
+      <div class="lane code">
+        <h3>Lập trình thi đấu</h3>
+        <p>Tư duy thuật toán theo lộ trình Blockly rồi Python, luyện đề bám sát format từng kỳ thi.</p>
+        <div class="chips"><span>HKICO</span><span>Tin học trẻ</span></div>
+        <p class="tools">Scratch, CodeKitten, Tynker, CoSpaces, Blockly, Python, Roblox</p>
+      </div>
+    </div>
+
+    <ol class="method" aria-label="Quy trình huấn luyện">
+      <li><h4>Nền tảng trước</h4><p>Cơ khí, cảm biến, thuật toán cơ bản vững rồi mới vào format thi.</p></li>
+      <li><h4>Luyện như thi thật</h4><p>Bấm giờ, random nhiệm vụ, chấm theo luật. Buổi nào cũng có số liệu để so.</p></li>
+      <li><h4>Tự trình bày</h4><p>Các em tự giải thích thiết kế và chiến thuật, kỹ năng quyết định ở vòng giám khảo.</p></li>
+      <li><h4>Nhìn lại, nâng cấp</h4><p>Sau mỗi giải, cập nhật giáo án và công cụ cho mùa tiếp theo.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="film" id="video">
+  <div class="wrap">
+    <h2>Hành trình trong 60 giây</h2>
+    <p class="sub">Những mùa giải, những tấm huy chương và rất nhiều giờ luyện sân, dựng lại từ ảnh thật của đội.</p>
+    <video controls preload="metadata" playsinline poster="assets/video-poster.jpg">
+      <source src="assets/hanh-trinh.mp4" type="video/mp4">
+      Trình duyệt của bạn chưa hỗ trợ video.
+    </video>
+  </div>
+</section>
+
+<section id="anh">
+  <div class="wrap">
+    <h2>Khoảnh khắc</h2>
+    <p class="sub">Ảnh thật từ lớp học, sân thi đấu và các lễ trao giải.</p>
+    <div class="filters" role="group" aria-label="Lọc ảnh">
+      <button aria-pressed="true" data-f="all">Tất cả</button>
+      <button aria-pressed="false" data-f="enjoy">Enjoy AI</button>
+      <button aria-pressed="false" data-f="hkico">HKICO</button>
+      <button aria-pressed="false" data-f="wro">WRO</button>
+      <button aria-pressed="false" data-f="class">Lớp học &amp; luyện sân</button>
+      <button aria-pressed="false" data-f="life">Ngoài giờ</button>
+    </div>
+    <div class="masonry" id="masonry"></div>
+  </div>
+</section>
+
+<section id="ve-toi">
+  <div class="wrap">
+    <h2>Kinh nghiệm và chứng chỉ</h2>
+    <div class="about-grid">
+      <div>
+        <ul class="rows">
+          <li><div class="when">04/2022 – nay</div><div><b>Giáo viên STEAM, HLV Robotics</b><span>TEKY Holdings</span></div></li>
+          <li><div class="when">04/2024 – 12/2025</div><div><b>Trưởng cơ sở Teky Cầu Giấy</b><span>Quản lý, đánh giá đội ngũ giáo viên</span></div></li>
+          <li><div class="when">03/2025 – 07/2025</div><div><b>Thực tập sinh AI Automation</b><span>Global AI · workflow n8n, LLM, API</span></div></li>
+          <li><div class="when">05/2024 – 06/2025</div><div><b>Giáo viên CLB Robotics &amp; Lập trình</b><span>Trung tâm Sáng tạo trẻ EDS · Hanoi Westminster School</span></div></li>
+          <li><div class="when">2021 – 2025</div><div><b>Kỹ thuật phần mềm</b><span>Đại học Thủy Lợi</span></div></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="side">Chứng chỉ</h3>
+        <div class="certs">
+          <span>Google Certified Educator Level 2<small>2026 – 2029</small></span>
+          <span>Google Certified Educator Level 1<small>2026 – 2029</small></span>
+          <span>Gemini Certified Educator<small>2026 – 2029</small></span>
+          <span>Gemini Certified University Student<small>2026 – 2029</small></span>
+          <span>Huấn luyện viên WRO<small>Robotacon</small></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="lien-he">
+  <div class="wrap">
+    <h2>Muốn con tham gia WRO, Enjoy AI hay HKICO?</h2>
+    <p class="sub">Nhắn cho tôi để trao đổi lộ trình phù hợp với độ tuổi và mục tiêu của học sinh.</p>
+    <div class="contact-list">
+      <a href="tel:0374202948">Gọi 0374 202 948</a>
+      <a class="alt" href="mailto:09.levanbinh2003@gmail.com">Gửi email</a>
+      <a class="alt" href="https://www.facebook.com/lebinh.24082003/" target="_blank" rel="noopener">Nhắn Facebook</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>© 2026 Lê Văn Bình</span><span>Hà Nội, Việt Nam</span></div></footer>
+
+<div class="lightbox" id="lb" role="dialog" aria-modal="true" aria-label="Xem ảnh">
+  <button class="lb-close" aria-label="Đóng">×</button>
+  <button class="lb-prev" aria-label="Ảnh trước">‹</button>
+  <img alt="">
+  <button class="lb-next" aria-label="Ảnh sau">›</button>
+  <p></p>
+</div>
+
+<script>
+const PHOTOS = [
+  ['gf25-arch','enjoy','Enjoy AI Global Final 2025 · Trung Quốc'],
+  ['vn26-1','enjoy','Giải Nhất & Giải Nhì · Enjoy AI Việt Nam 2026'],
+  ['hkico-2','hkico','HKICO Final Round 2025–2026'],
+  ['class-1','class','Ngày thi đấu Enjoy AI'],
+  ['gf25-cybercity','enjoy','Enjoy AI 2025 Global Final'],
+  ['ao26-certs','enjoy','Enjoy AI Asian Open 2026 · 1st & 2nd Place'],
+  ['wro26-1','wro','Chung kết khu vực miền Bắc · Robotacon WRO 2026'],
+  ['train-2','class','Căn chỉnh robot trước lượt thi'],
+  ['hkico-3','hkico','HKICO Final Round'],
+  ['gf25-coaches','enjoy','Đội ngũ huấn luyện viên tại Global Final'],
+  ['vn26-2','enjoy','Giải Nhất, Nhì, Top 10 · Enjoy AI Việt Nam 2026'],
+  ['class-2','class','Lắp ráp và thử robot'],
+  ['gf25-champion','enjoy','Cúp Enjoy AI'],
+  ['teky-1','class','Lễ vinh danh "Những người chiến thắng"'],
+  ['hkico-1','hkico','HKICO 2025–2026'],
+  ['train-1','class','Kiểm tra sân trước giờ thi'],
+  ['gf25-arch2','enjoy','Enjoy AI 2025 Global Final'],
+  ['wro26-2','wro','Robotacon WRO 2026'],
+  ['class-4','class','Luyện sân Enjoy AI'],
+  ['ao26-celebrate','enjoy','Ăn mừng sau giải'],
+  ['hkico-5','hkico','HKICO · Vinh danh'],
+  ['vn26-3','enjoy','Enjoy AI Việt Nam 2026 · Hà Nội'],
+  ['train-4','class','Đội tuyển trước lượt thi'],
+  ['gf25-medal','enjoy','Huy chương Global Final 2025'],
+  ['class-3','class','Lập trình robot'],
+  ['teky-2','class','Vinh danh học sinh'],
+  ['hkico-4','hkico','HKICO Final Round'],
+  ['train-3','class','Ngày thi đấu'],
+  ['vn26-4','enjoy','Enjoy AI Việt Nam 2026'],
+  ['class-5','class','Sân Enjoy AI'],
+  ['gf25-solo','enjoy','Global Final 2025'],
+  ['train-6','class','Robot trên bàn thi'],
+  ['life-1','life','Bữa tối cả đội'],
+  ['life-2','life','Tối sau giải'],
+  ['life-3','life','Tạm nghỉ giữa giờ luyện sân'],
+  ['coach-3','life','Trên đường đến Global Final'],
+  ['gf25-team','enjoy','V+ STEAM LAB tại Global Final'],
+  ['train-5','class','Lượt thi chính thức'],
+  ['teky-3','class','Những người chiến thắng'],
+];
+const m = document.getElementById('masonry');
+PHOTOS.forEach(([f,c,t],i)=>{
+  const fig=document.createElement('figure'); fig.dataset.c=c; fig.dataset.i=i;
+  fig.innerHTML=`<img src="assets/img/${f}.jpg" alt="${t}" loading="lazy"><figcaption>${t}</figcaption><button class="open" aria-label="Phóng to: ${t}"></button>`;
+  m.appendChild(fig);
+});
+document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.filters button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  m.querySelectorAll('figure').forEach(fg=>fg.hidden=!(b.dataset.f==='all'||fg.dataset.c===b.dataset.f));
+}));
+// lightbox
+const lb=document.getElementById('lb'),lbImg=lb.querySelector('img'),lbCap=lb.querySelector('p');let cur=0,lastFocus;
+const visible=()=>[...m.querySelectorAll('figure:not([hidden])')];
+function show(i){const v=visible();cur=(i+v.length)%v.length;const f=v[cur];const [n,,t]=PHOTOS[f.dataset.i];lbImg.src=`assets/img/${n}.jpg`;lbImg.alt=t;lbCap.textContent=t;}
+m.addEventListener('click',e=>{const f=e.target.closest('figure');if(!f)return;lastFocus=document.activeElement;show(visible().indexOf(f));lb.classList.add('on');lb.querySelector('.lb-close').focus();});
+lb.querySelector('.lb-close').onclick=()=>{lb.classList.remove('on');lastFocus&&lastFocus.focus();};
+lb.querySelector('.lb-prev').onclick=()=>show(cur-1);
+lb.querySelector('.lb-next').onclick=()=>show(cur+1);
+lb.addEventListener('click',e=>{if(e.target===lb)lb.querySelector('.lb-close').click();});
+addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==='Escape')lb.querySelector('.lb-close').click();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1);});
+
+// nav
+const nav=document.getElementById('nav');
+const onNav=()=>nav.classList.toggle('solid',scrollY>innerHeight*.6);addEventListener('scroll',onNav,{passive:true});onNav();
+
+// line-follower track
+const track=document.getElementById('track'),tape=document.getElementById('tape'),done=document.getElementById('tapeDone'),robot=document.getElementById('robot');
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let len=0;
+function buildPath(){
+  const r=track.getBoundingClientRect();const stops=[...track.querySelectorAll('.stop')];
+  const narrow=innerWidth<=820;let d='';
+  stops.forEach((s,i)=>{
+    const b=s.getBoundingClientRect();const y=b.top-r.top+b.height/2;
+    if(narrow){const x=14; d+= i? ` L ${x} ${y}`:`M ${x} ${b.top-r.top} L ${x} ${y}`; if(i===stops.length-1)d+=` L ${x} ${b.bottom-r.top}`;return;}
+    const left=i%2===0;const x=left? r.width*.25 : r.width*.75;
+    if(!i){d=`M ${r.width/2} 0 C ${r.width/2} ${y*.5}, ${x} ${y*.5}, ${x} ${y}`;}
+    else{const prev=stops[i-1].getBoundingClientRect();const py=prev.top-r.top+prev.height/2;const px=left? r.width*.75:r.width*.25;const my=(py+y)/2;
+      d+=` C ${px} ${my}, ${x} ${my}, ${x} ${y}`;}
+    if(i===stops.length-1)d+=` C ${x} ${b.bottom-r.top}, ${r.width/2} ${b.bottom-r.top-20}, ${r.width/2} ${b.bottom-r.top}`;
+  });
+  tape.setAttribute('d',d);done.setAttribute('d',d);len=tape.getTotalLength();
+  done.style.strokeDasharray=len;update();
+}
+function update(){
+  if(!len)return;const r=track.getBoundingClientRect();
+  let p=reduce?1:Math.min(1,Math.max(0,(innerHeight*.55-r.top)/r.height));
+  done.style.strokeDashoffset=len*(1-p);
+  const pt=tape.getPointAtLength(len*p),pt2=tape.getPointAtLength(Math.min(len,len*p+1));
+  const a=Math.atan2(pt2.y-pt.y,pt2.x-pt.x)*180/Math.PI+90;
+  robot.style.transform=`translate(${pt.x}px,${pt.y}px) rotate(${a-180}deg)`;
+}
+addEventListener('scroll',update,{passive:true});addEventListener('resize',buildPath);
+addEventListener('load',buildPath);buildPath();
+</script>
+</body>
+</html>
