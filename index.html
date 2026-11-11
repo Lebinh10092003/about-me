@@ -38,8 +38,8 @@ h2{font-size:clamp(30px,4.2vw,50px);font-weight:800;max-width:18ch}
 .sub{color:var(--muted);max-width:56ch;margin-top:14px}
 
 /* ---------- nav ---------- */
-.nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,box-shadow .3s}
-.nav.solid{background:rgba(255,255,255,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--mat-line)}
+.nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,box-shadow .3s;background:rgba(23,20,42,.72);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.nav.solid{background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--mat-line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
 .brand{font-weight:800;text-decoration:none;display:flex;align-items:center;gap:10px;color:#fff}
 .nav.solid .brand,.nav.solid .links a{color:var(--ink)}
